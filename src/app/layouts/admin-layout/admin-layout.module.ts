@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import { CommonModule, CurrencyPipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminLayoutRoutes } from './admin-layout.routing';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
@@ -19,6 +19,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { WorkTableListComponent } from 'app/work-table-list/work-table-list.component';
 import { ComponentsModule } from 'app/components/components.module';
 import { UserTableListComponent } from 'app/user-table-list/user-table-list.component';
+import { WorkProfileComponent } from 'app/work-profile/work-profile.component';
 //import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 //import { FlatpickrModule } from 'angularx-flatpickr';
@@ -37,7 +38,6 @@ import { UserTableListComponent } from 'app/user-table-list/user-table-list.comp
     MatSelectModule,
     MatTooltipModule,
     ComponentsModule,
-    
     //FlatpickrModule.forRoot(),
     //CalendarModule
     // .forRoot({
@@ -49,13 +49,16 @@ import { UserTableListComponent } from 'app/user-table-list/user-table-list.comp
     DashboardComponent,
     UserProfileComponent,
     WorkTableListComponent,
+    WorkProfileComponent,
     UserTableListComponent,
     TypographyComponent,
     IconsComponent,
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-  ]
+    WorkProfileComponent
+  ],
+  providers: [CurrencyPipe]
 })
 
 export class AdminLayoutModule {}

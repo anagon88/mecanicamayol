@@ -1,0 +1,54 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header card-header-danger">
+            <h4 class="card-title">Trabajo</h4>
+            <p class="card-category">Completar los datos</p>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Nombre" type="text">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Fecha" type="text">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Total" type="text" value="{{total | currency }}" class="card-title">
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <mat-form-field class="example-full-width">
+                    <textarea matInput placeholder="Detalle" type="text"></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="row" style="margin-top: 50px;">
+                <app-table-list class="col-md-12" [title]="'Listado de Materiales'" [isMainTable]="true"
+                  [tableTitles]="tableTitlesMaterial" [tableInfo]="tableInfoMaterial" [addButton]="'Nuevo Material'"></app-table-list>
+              </div>
+              <div class="row" style="margin-top: 50px;">
+                <app-table-list class="col-md-12" [title]="'Listado de Trabajos'" [isMainTable]="true"
+                  [tableTitles]="tableTitlesWork" [tableInfo]="tableInfoWork" [addButton]="'Nuevo trabajo'"></app-table-list>
+              </div>
+              <button style="margin-top: 50px;" mat-raised-button type="submit" class="btn btn-danger pull-right">Guardar</button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
