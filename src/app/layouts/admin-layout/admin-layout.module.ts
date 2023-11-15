@@ -20,6 +20,7 @@ import { WorkTableListComponent } from 'app/work-table-list/work-table-list.comp
 import { ComponentsModule } from 'app/components/components.module';
 import { UserTableListComponent } from 'app/user-table-list/user-table-list.component';
 import { WorkProfileComponent } from 'app/work-profile/work-profile.component';
+import { MateralProfileComponent } from 'app/materal-profile/materal-profile.component';
 //import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 //import { FlatpickrModule } from 'angularx-flatpickr';
@@ -56,7 +57,8 @@ import { WorkProfileComponent } from 'app/work-profile/work-profile.component';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-    WorkProfileComponent
+    WorkProfileComponent,
+    MateralProfileComponent
   ],
   providers: [CurrencyPipe]
 })
